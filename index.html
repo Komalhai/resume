@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+     <div id="header">
+          <div class="container">
+               <nav>
+                    <div id="logotext">Portfolio</div>
+
+                    <ul id="sidemenu">
+                         <li><a href="#header">Home</a></li>
+                         <li><a href="#About">About Me</a></li>
+                         <li><a href="#contect">Contect Me</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                     </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+               </nav>
+               <div class="header-text">
+               
+
+                         <h1>Hi, It's <span>Komal</span>
+                              <h3>I'm a <span>frontend developer</span></h3>
+                              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea non officia consequatur
+                                   eligendi praesentium perspiciatis ullam! Voluptatibus tempora, blanditiis voluptatem
+                                   ex aperiam dolores facere, tempore esse sunt modi, alias eligendi!
+                              </p>
+                    </div>
+               </div>
+
+          </div>
+     
+     <!-- ====================About============= -->
+     <div id="About">
+          <div class="container">
+               <div class="row">
+                    <div class="About-image">
+                         <img src="photo-1634761980588-d889639b2913.jpg" alt="">
+                    </div>
+                    <div class="About-text">
+                         <h1 class="sub-title"> About Me</h1>
+
+                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea non officia consequatur
+                               eligendi praesentium perspiciatis ullam! Voluptatibus tempora, blanditiis voluptatem
+                              ex aperiam dolores facere, tempore esse sunt modi, alias eligendi!
+                         </p>
+                         <div class="title">
+                              <p class="tab-title active-link" onclick="opentab('skills')">Skills</p>
+                              <p class="tab-title" onclick="opentab('experience')">Experience</p>
+                              <p class="tab-title" onclick="opentab('education')">Education</p>
+                         </div>
+                         <div class="tab-content active-tab" id="skills">
+                              <ul>
+                                   <li><span>Frontend web developer</span><br>Designing responsive web interface</li>
+                                   <li><span>Graphic designer</span><br>Photoshop and Canva</li>
+                                   <li><span>Python</span><br>Python programming </li>
+                         
+                              </ul>
+                         </div>
+                         <div class="tab-content" id="experience">
+                              <ul>
+                                   <li><span>Ekarma</span><br>Designing responsive web interface</li>
+                                   <li><span>Cyber security</span><br>Photoshop and Canva</li>
+                                   <li><span>Bharat intern</span><br>Python programming </li>
+
+                              </ul>
+                         </div>
+                          <div class="tab-content" id="education">
+                              <ul>
+                                   <li><span>Bachelor of Computer Application<br>2024</span><br>K.L. Mehta Dayanand College For Women Faridabad Haryana</li>
+                                   <li><span>High Secondary Education<br>2021 </span><br>G.G.S.S.School Pali Faridabad Haryana</li>
+                                   <li><span>Secondary Education<br>2019</span><br>G.G.S.S.School Pali Faridabad Haryana</li>
+
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+<!-- ==========================Contect-section=================================================== -->
+<div id="contect">
+     <div class="container">
+        <div class="row">
+          <div class="row-left">
+               <h1 class="sub-title">Contect Me</h1>
+               <p><i class="fa-duotone fa-solid fa-envelope"></i>komal15042004@gmail.com</p>
+               <p><i class="fa-solid fa-phone"></i>9311625082</p>
+               <div class="social-icon">
+                    <a href="https://mail.google.com/mail/u/0/?hl=en_GB&pli=1#inbox"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/Komalhai"><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/komal-parjapati-4463692a7/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="portfoliofile\White Simple Student CV Resume" download class="btn">Download CV</a>
+          </div>
+          <div class="row-right">
+               <form name='submit-to-google-sheet'>
+                    <input type="text" name="Name" placeholder="Your Name" require>
+                    <input type="email" name="Email" placeholder="Youe Email" required>
+                    <textarea name="Massege" rows="6" placeholder="Your Massege"></textarea>
+                    <button type="Submit" class="btn">Submit</button>
+
+               </form>
+               <span id="msg"></span>
+          </div>
+        </div>          
+     </div>
+
+<!-- ============================footer-====================================== -->
+
+<div id="footer">made with <i class="fa-solid fa-heart"></i></div>
+</div>
+
+
+
+
+<script>
+     var tabtitles=document.getElementsByClassName("tab-title");
+     var tabcontents=document.getElementsByClassName("tab-content");
+     function opentab(tabname){
+          for(tabtitle of tabtitles){
+               tabtitle.classList.remove("active-link");
+          }
+          for(tabcontent of tabcontents){
+               tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab") ;    
+     }
+
+     </script>
+     <script>
+        var sidem=document.getElementById("sidemenu")
+        function openmenu(){
+          sidem.style.right='0';
+        }
+        function closemenu(){
+          sidem.style.right='-160px';
+        }
+     </script>
+     <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbxHN36z2IrhDfqU0ObekqilaOP09976KbUgv_KBy0B6UMFHD07eXxq_bs6VBX9I7lKRkw/exec'
+          const form = document.forms['submit-to-google-sheet']
+          const msg=document.getElementById("msg")
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => {
+               msg.innerHTML="message sent successfully"
+               setTimeout(function(){
+                 msg.innerHTML=""
+               },4000)
+               form.reset()
+              })
+              .catch(error => console.error('Error!', error.message))
+          })
+        </script>
+</body>
+
+</html>
